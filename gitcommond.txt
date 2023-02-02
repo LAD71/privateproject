@@ -42,7 +42,17 @@
   git checkout -- filename
   
   此时文件就和添加到暂存区之前保持一致
-8.
+8.删除文件
+  1 本地目录文件使用rm删除后，版本库内该文件还存在，则需要使用
+  git rm filename
+  eg:git rm readme.txt
+  之后需要再commit一次，保持一致
+  2 本地目录误删，但是版本库还有该文件，则可以使用
+  git checkout -- filename
+  eg:git checkout readme.txt
+  原理就是将版本库内的文件替换工作区内的版本文件
+
+  warning：如果从未被添加到版本库，就被删除的文件，是无法恢复的
 
 
 
