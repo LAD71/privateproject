@@ -1,0 +1,50 @@
+1.在合适的目录下创建一个版本库
+2.通过git init将这个目录变成Git可以管理的仓库
+  git init
+  出现：Initialized empty Git repository in G:/Project/GitEntrepot/.git 代表初始化成功
+3.创建文件
+  1 使用git add命令，告诉Git把文件添加到仓库，即把当前add文件放在暂存区
+  eg：git add readme.txt
+  2 使用git commit -m "xxx"命令，将文件提交到仓库，即把暂存区文件提交到默认的当前分支master
+  eg: git commit -m "wrote a readme file"
+  提交成功后，会告诉本次提交几个文件被改动，修改了几个内容
+  3 可以多次add ,commit可以一次提交多个文件
+  eg: git add file1.txt
+      git add file2.txt file3.txt
+      git commit -m "add 3 files"
+
+  warning:除了git init可以在仓库目录外执行，其余命令必须都在仓库目录内执行；
+          如果再提交的时候报错当前目录下没有文件，则查看目录是否正确
+4.版本回退
+  1 查看最近提交
+    git log
+    如果想简略看，可以加参数 --pretty=oneline
+  2 回退到上一个版本
+    git reset --hard HEAD^
+  3 如果后悔回退，只要当前窗口未关闭，使用命令
+    git reset --hard xxxx
+    xxxx就是某个版本的commit id，一般来说只要前几位就可以
+  4 如果已经关掉当前窗口，但是依旧想回到之前的某个版本，可以使用命令
+    git reflog
+    可以查看到每一次提交的记录，包含有commit id，找到id后在执行步骤3即可回到目标版本
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
