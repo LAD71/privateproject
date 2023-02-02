@@ -53,8 +53,23 @@
   原理就是将版本库内的文件替换工作区内的版本文件
 
   warning：如果从未被添加到版本库，就被删除的文件，是无法恢复的
+9.首次push文件到远程仓库
+  要关联一个远程库，使用命令
+  git remote add origin https://github.com/LAD71/privateproject.git
 
+  关联一个远程库时必须给远程库指定一个名字，origin是默认习惯命名；
 
+  关联后，使用命令
+  git push -u origin master第一次推送master分支的所有内容；
+  
+  info:如果首次push没反应，如下解决
+  	1.电脑搜索-凭据
+	2.Windows凭据-普通凭据，如果有关于GitHub的凭据则删除，没有则跳过
+	3.在需要push的目录下，按住shift鼠标右击，打开powershell
+	4.执行git push -u origin master
+	5.弹出认证选项选择第一个web认证
+	6.输入正确密码认证通过
+	7.git bash打开命令行，再次执行git push -u origin master即可成功推送到远程仓库
 
 
 
