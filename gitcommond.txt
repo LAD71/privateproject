@@ -70,6 +70,14 @@
 	5.弹出认证选项选择第一个web认证
 	6.输入正确密码认证通过
 	7.git bash打开命令行，再次执行git push -u origin master即可成功推送到远程仓库
+10.git分支  以下name都指的是分支名
+   查看分支 git branch
+   创建分支 git branch name
+   切换分支 git checkout name  或者 git switch name
+   创建并切换分支 git chenkout -b name  或者  git switch -c name
+   合并某分支到当前分支 git merge name
+   删除分支 git branch -d name
+
 
 
 
