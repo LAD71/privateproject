@@ -18,3 +18,5 @@ Git has a mutable index called stage.
 >>>>>>> feature1
 
 再加一行就不需要再次修改
+
+这一行是为了分支管理策略
